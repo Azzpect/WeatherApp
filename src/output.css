@@ -578,20 +578,16 @@ video {
   right: 2.5rem;
 }
 
-.top-16 {
-  top: 4rem;
-}
-
 .top-20 {
   top: 5rem;
 }
 
-.top-8 {
-  top: 2rem;
-}
-
 .top-24 {
   top: 6rem;
+}
+
+.top-8 {
+  top: 2rem;
 }
 
 .mx-5 {
@@ -642,10 +638,6 @@ video {
 
 .h-96 {
   height: 24rem;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .w-12 {

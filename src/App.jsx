@@ -86,28 +86,28 @@ function App() {
             <div id="temp">
             <h3 className='text-yellow-50 text-xl font-mono font-bold'>temp:</h3>
               <div className='flex items-center ml-5 gap-1'>
-                <img src="./public/images/temp.png" alt="" width={15}/>
+                <img src="/images/temp.png" alt="" width={15}/>
                 <h3 ref={temp} className='text-center text-yellow-50 text-lg font-mono font-bold'></h3>
               </div>
             </div>
             <div id="humidity">
               <h3 className='text-yellow-50 text-xl font-mono font-bold'>Humid:</h3>
               <div className='flex items-center ml-5 gap-1'>
-                <img src="./public/images/humidity.png" alt="" />
+                <img src="/images/humidity.png" alt="" />
                 <h3 ref={humid} className='text-center text-yellow-50 text-lg font-mono font-bold'></h3>
               </div>
             </div>
             <div id="pressure">
               <h3 className='text-yellow-50 text-xl font-mono font-bold'>Pressure:</h3>
               <div className='flex items-center ml-5 gap-1'>
-                <img src="./public/images/pressure.png" alt="" />
+                <img src="/images/pressure.png" alt="" />
                 <h3 ref={pressure} className='text-center text-yellow-50 text-lg font-mono font-bold'></h3>
               </div>
             </div>
             <div id="wind">
               <h3 className='text-yellow-50 text-xl font-mono font-bold'>Wind:</h3>
               <div className='flex items-center ml-5 gap-1'>
-                <img src="./public/images/wind.png" alt="" />
+                <img src="/images/wind.png" alt="" />
                 <h3 ref={wind} className='text-center text-yellow-50 text-lg font-mono font-bold'></h3>
               </div>
             </div>
@@ -132,11 +132,11 @@ function App() {
         </div>
         <div id="sun" className='w-38 flex flex-col absolute right-10 bottom-96'>
           <div id="sunrise" className='flex items-center justify-between'>
-            <img src="./public/images/sunrise.png" width={50} alt="" />
+            <img src="/images/sunrise.png" width={50} alt="" />
             <h3 ref={sunrise} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
           </div>
           <div id="sunset" className='flex items-center justify-between'>
-            <img src="./public/images/sunset.png" width={50} alt="" />
+            <img src="/images/sunset.png" width={50} alt="" />
             <h3 ref={sunset} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
           </div>
         </div>
