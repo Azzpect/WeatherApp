@@ -78,11 +78,32 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col bg-gradient-to-tr from-blue-700 to-pink-600 relative' style={{width: '100vw', height: '90vh', boxSizing: 'border-box'}}>
-        <h3 id='day' className='font-sans text-3xl font-bold text-yellow-50 mx-5 my-7'>Monday</h3>
-        <img ref={weatherpic} src="" className='ml-16 relative top-8' alt="" width={100}/>
-        <div id='current-weather-container' className='w-96 h-96 flex justify-between absolute right-0 top-24'>
-          <div id="weather-stats" className='self-end gap-2 flex flex-wrap justify-between items-center w-44'>
+      <div className='flex flex-col items-center bg-gradient-to-tr from-blue-700 to-pink-600 relative w-screen h-screen box-border'>
+        <h3 id='day' className='self-start font-sans text-3xl font-bold text-yellow-50 mx-5 my-7'>Monday</h3>
+        <div className='ml-10 self-start'>
+          <img ref={weatherpic} src="" className='' alt="" width={100}/>
+          <div id="status-desc" className='h-44 mr-10 flex flex-col'>
+            <div id="country" className='w-12 flex items-center justify-around ml-20'>
+              <img ref={countryFlag} src="" alt=""/>
+              <h4 ref={country} className='text-yellow-50 text-lg font-sans font-semibold'></h4>
+            </div>
+            <h3 ref={cityName} className='text-center text-yellow-50 text-3xl font-mono font-bold'></h3>
+            <h4 ref={coord} className='text-yellow-50 font-sans text-xs text-center'></h4>
+            <h3 ref={weather} className='text-center text-yellow-50 text-2xl font-mono font-bold'></h3>
+          </div>
+        </div>
+        <div id='current-weather-container' className='flex justify-between absolute top-5 right-5'>
+          <div id="weather-stats" className='self-end gap-2 flex flex-wrap justify-between items-center w-[14rem]'>
+            <div id="sun" className='w-38 flex flex-col'>
+              <div id="sunrise" className='flex items-center justify-between'>
+                <img src="/images/sunrise.png" width={50} alt="" />
+                <h3 ref={sunrise} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
+              </div>
+              <div id="sunset" className='flex items-center justify-between'>
+                <img src="/images/sunset.png" width={50} alt="" />
+                <h3 ref={sunset} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
+              </div>
+            </div>
             <div id="temp">
             <h3 className='text-yellow-50 text-xl font-mono font-bold'>temp:</h3>
               <div className='flex items-center ml-5 gap-1'>
@@ -116,30 +137,13 @@ function App() {
               <h3 ref={timezone} className='text-center text-yellow-50 text-sm font-mono font-bold'></h3>
             </div>
           </div>
-          <div id="status-desc" className='h-44 mr-10 flex flex-col relative top-20'>
-            <div id="country" className='w-12 flex items-center justify-around ml-20'>
-              <img ref={countryFlag} src="" alt=""/>
-              <h4 ref={country} className='text-yellow-50 text-lg font-sans font-semibold'></h4>
-            </div>
-            <h3 ref={cityName} className='text-center text-yellow-50 text-3xl font-mono font-bold'></h3>
-            <h4 ref={coord} className='text-yellow-50 font-sans text-xs text-center'></h4>
-            <h3 ref={weather} className='text-center text-yellow-50 text-2xl font-mono font-bold'></h3>
-          </div>
+          
         </div>
-        <div id="input" className='w-full h-32 absolute bottom-40 flex flex-col items-center justify-around'>
+        <div id="input" className='w-full h-32 flex flex-col items-center justify-around'>
           <input type="text" name="" id="" className='w-64 h-8 pl-3 text-lg outline-none rounded-xl' placeholder='Enter city name:' onChange={cityInput} value={city}/>
           <button className='bg-pink-400 w-20 h-8 rounded-xl' onClick={fetchWeatherData}>Search</button>
         </div>
-        <div id="sun" className='w-38 flex flex-col absolute right-10 bottom-96'>
-          <div id="sunrise" className='flex items-center justify-between'>
-            <img src="/images/sunrise.png" width={50} alt="" />
-            <h3 ref={sunrise} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
-          </div>
-          <div id="sunset" className='flex items-center justify-between'>
-            <img src="/images/sunset.png" width={50} alt="" />
-            <h3 ref={sunset} className='text-center text-yellow-50 text-lg font-mono font-bold ml-3'></h3>
-          </div>
-        </div>
+        
       </div>
     </>
   )
